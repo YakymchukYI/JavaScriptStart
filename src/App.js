@@ -17,8 +17,11 @@ function App() {
   const str2='World';
   const str3='World Hello World';
   let str4=' Darck-Night';
-  let arr1=str4.split('-', 1);
-  let arr2=str1.split('', 3);
+  let arr1=str4.split('-',);
+  let arr2=str1.split('');
+  let arr3=str1.repeat(4);
+  console.log(str3.includes('Hello'));
+  console.log(str3.includes('Darck'));
   return (
     <div className="App">
       <header className="App-header">
@@ -37,8 +40,10 @@ function App() {
         <p>{str1+' '+str2}</p>
         <p>{str3.slice(0,5)}</p>
         <p>{str3.slice(6,11)}</p>
-        <p>{arr1}</p>
-        <p>{arr2}</p>
+        <p>{arr1+' '}</p>
+        <p>{arr2+' '}</p>
+        <p>{arr3}</p>
+        <p>{str1.charAt(0)+" "+str1.charAt(4)}</p>
       </header>
     </div>
   );
