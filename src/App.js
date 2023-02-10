@@ -17,6 +17,8 @@ function App() {
   const str3='World Hello World';
   let str4=' Darck-Night';
   let str5='This is nice document';
+  let str6='This is nice document nice';
+  let str7='    to    ';
   let name='yaroslav';
   
   
@@ -51,6 +53,17 @@ function App() {
   console.log(str5.substring(8, str5.length-1));  
 
   let v1=str5.replace('document', str2);
+  let v2=str6.replaceAll('nice', 'good');
+  let v3=str2.padEnd(50 , '123');
+  let v4=str2.padStart(50 , '123');
+  let v5=str7.trim();
+  console.log(str7.length);
+  console.log(v5.length);
+  let v6=str7.trimEnd();
+  console.log(v6.length);
+  let v7=str7.trimStart();
+  console.log(v7);
+  console.log(v7.length);
 
   const name1="yaroslav";
   function ucFirst(name){
@@ -62,11 +75,10 @@ function App() {
   const vSpam='ViAgRa and XXX';
   function checkSpam(vSpam){
     let vSpamtLC=vSpam.toLowerCase();
-    if(vSpamtLC.includes('viagra') || vSpamtLC.includes('xxx')){
-      return 0;
-    }
-    return 1;
+    return vSpamtLC.includes('viagra') || vSpamtLC.includes('xxx');
   }
+  console.log(checkSpam(vSpam));
+  
   const maxlength=10;
   function truncate(str5, maxlength){
     if(str5.length>=maxlength){
@@ -74,6 +86,14 @@ function App() {
     }
     return str5;
   }// цю функцію наваяв вже без гугла.
+
+  function extractCurrencyValue(){
+    let val='$150';
+    let val1=parseInt(val.substring(1));
+    return val1;
+  }
+ console.log(typeof extractCurrencyValue());
+
 
 
   return (
@@ -101,10 +121,16 @@ function App() {
         <p>{str5.substring(8, str5.length-1)}</p>
         <p>{str5.substr(2, 10)}</p>
         <p>{v1}</p>
+        <p>{v2}</p>
+        <p>{v3}</p>
+        <p>{v4}</p>
+        <p>{v5}</p>
+
         <p>{ucFirst(name)}</p>
         <p>{upName}</p>
         <p>{checkSpam(vSpam)}</p>
         <p>{truncate(str5, maxlength)}</p>
+        <p>{extractCurrencyValue()}</p>
       </header>
     </div>
   );
