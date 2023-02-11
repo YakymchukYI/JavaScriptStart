@@ -19,7 +19,7 @@ function App() {
   let str5='This is nice document';
   let str6='This is nice document nice';
   let str7='    to    ';
-  let name='yaroslav';
+  
   
   
   let arr1=str4.split('-',);
@@ -65,19 +65,23 @@ function App() {
   console.log(v7);
   console.log(v7.length);
 
-  const name1="yaroslav";
-  function ucFirst(name){
+  // const name1="yaroslav";
+  // function ucFirst(name){
+  //   return name[0].toUpperCase()+name.slice(1);
+  // }
+  //const upName=name1.charAt(0).toUpperCase()+name1.substring(1);
+  
+  const ucFirst = () =>{
+    const name='yaroslav';
     return name[0].toUpperCase()+name.slice(1);
   }
-  const upName=name1.charAt(0).toUpperCase()+name1.substring(1);
 
-
-  const vSpam='ViAgRa and XXX';
-  function checkSpam(vSpam){
-    let vSpamtLC=vSpam.toLowerCase();
+  const checkSpam = () => {
+    const vSpam='ViAgRa and XXX';
+    const vSpamtLC=vSpam.toLowerCase();
     return vSpamtLC.includes('viagra') || vSpamtLC.includes('xxx');
   }
-  console.log(checkSpam(vSpam));
+  console.log(checkSpam());
   
   const maxlength=10;
   function truncate(str5, maxlength){
@@ -126,9 +130,9 @@ function App() {
         <p>{v4}</p>
         <p>{v5}</p>
 
-        <p>{ucFirst(name)}</p>
-        <p>{upName}</p>
-        <p>{checkSpam(vSpam)}</p>
+        <p>{ucFirst()}</p>
+        {/* <p>{upName}</p> */}
+        <p>{checkSpam()}</p>
         <p>{truncate(str5, maxlength)}</p>
         <p>{extractCurrencyValue()}</p>
       </header>
