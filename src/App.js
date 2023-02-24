@@ -83,17 +83,17 @@ function App() {
   }
   console.log(checkSpam());
   
-  const maxlength=10;
-  function truncate(str5, maxlength){
+  const truncate = () => {
+    const maxlength=10;
     if(str5.length>=maxlength){
       return str5.slice(0, maxlength-3)+'...';
     }
     return str5;
-  }// цю функцію наваяв вже без гугла.
+  }
 
-  function extractCurrencyValue(){
-    let val='$150';
-    let val1=parseInt(val.substring(1));
+  const extractCurrencyValue = () => {
+    const val='$150';
+    const val1=parseInt(val.substring(1));
     return val1;
   }
  console.log(typeof extractCurrencyValue());
@@ -146,7 +146,7 @@ congratsIfMoreThenCount(personsArr, 4);
         <p>{ucFirst()}</p>
         {/* <p>{upName}</p> */}
         <p>{checkSpam()}</p>
-        <p>{truncate(str5, maxlength)}</p>
+        <p>{truncate()}</p>
         <p>{extractCurrencyValue()}</p>
       </header>
     </div>
