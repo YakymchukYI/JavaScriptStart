@@ -98,7 +98,20 @@ function App() {
   }
  console.log(typeof extractCurrencyValue());
 
+ const personsArr = [
+  {name: "John", age: 17},
+  {name: "Johny", age: 24},
+  {name: "Thom", age: 23},
+  {name: "Thomas", age: 18},
+  {name: "Eryn", age: 31}
+ ]
+ const congratsIfMoreThenCount = (arr, count) => {
+  const congrats1 = "Yes you heav more then " + count + " persons";
+  const congrats2 = "No you heav less then " + count + " persons";
+  arr.length > count ? alert(congrats1) : alert(congrats2);
+ }
 
+congratsIfMoreThenCount(personsArr, 4);
 
   return (
     <div className="App">
